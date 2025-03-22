@@ -1,3 +1,8 @@
+
+
+# Sat Mar 22 05:19:58 PM EDT 2025 - New / changed files
+
+
 CopyFile /boot/grub/grub.cfg 600
 CopyFile /boot/grub/grubenv
 CopyFile /efi/EFI/GRUB/grubx64.efi 755
@@ -25,6 +30,19 @@ CreateLink /etc/fonts/conf.d/60-latin.conf /usr/share/fontconfig/conf.default/60
 CreateLink /etc/fonts/conf.d/65-fonts-persian.conf /usr/share/fontconfig/conf.default/65-fonts-persian.conf
 CreateLink /etc/fonts/conf.d/65-nonlatin.conf /usr/share/fontconfig/conf.default/65-nonlatin.conf
 CreateLink /etc/fonts/conf.d/69-unifont.conf /usr/share/fontconfig/conf.default/69-unifont.conf
+CreateLink /etc/fonts/conf.d/69-urw-bookman.conf /usr/share/fontconfig/conf.default/69-urw-bookman.conf
+CreateLink /etc/fonts/conf.d/69-urw-c059.conf /usr/share/fontconfig/conf.default/69-urw-c059.conf
+CreateLink /etc/fonts/conf.d/69-urw-d050000l.conf /usr/share/fontconfig/conf.default/69-urw-d050000l.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-backwards.conf /usr/share/fontconfig/conf.default/69-urw-fallback-backwards.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-generics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-generics.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-specifics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-specifics.conf
+CreateLink /etc/fonts/conf.d/69-urw-gothic.conf /usr/share/fontconfig/conf.default/69-urw-gothic.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-mono-ps.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-mono-ps.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-roman.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-roman.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-sans.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-sans.conf
+CreateLink /etc/fonts/conf.d/69-urw-p052.conf /usr/share/fontconfig/conf.default/69-urw-p052.conf
+CreateLink /etc/fonts/conf.d/69-urw-standard-symbols-ps.conf /usr/share/fontconfig/conf.default/69-urw-standard-symbols-ps.conf
+CreateLink /etc/fonts/conf.d/69-urw-z003.conf /usr/share/fontconfig/conf.default/69-urw-z003.conf
 CreateLink /etc/fonts/conf.d/80-delicious.conf /usr/share/fontconfig/conf.default/80-delicious.conf
 CreateLink /etc/fonts/conf.d/90-synthetic.conf /usr/share/fontconfig/conf.default/90-synthetic.conf
 CopyFile /etc/fstab
@@ -56,10 +74,6 @@ CopyFile /etc/sudoers
 CopyFile /etc/vconsole.conf
 CreateDir /opt/containerd/bin 711
 CreateDir /opt/containerd/lib 711
-CopyFile /opt/vulscanagent-data/cronjobs/deadbeefdead_cronjob.sh 755
-CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install.sh 755
-CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install_uninstall.sh 755
-CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install_updater.sh 755
 CreateDir /storage
 CopyFile /usr/share/applications/mimeinfo.cache
 CopyFile /usr/share/glib-2.0/schemas/gschemas.compiled
@@ -77,7 +91,6 @@ CopyFile /var/lib/colord/storage.db '' colord colord
 CopyFile /var/lib/containerd/io.containerd.content.v1.content/blobs/sha256/ca803dc10b830a8b65ce03b7e952d2caa2888c1de7d3ae9826c6ccbce1c146dc 444
 CreateDir /var/lib/containerd/io.containerd.content.v1.content/ingest
 CopyFile /var/lib/containerd/io.containerd.metadata.v1.bolt/meta.db
-CreateDir /var/lib/containerd/io.containerd.runtime.v2.task/moby/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501 711
 CreateDir /var/lib/containerd/io.containerd.sandbox.controller.v1.shim 711
 CreateDir /var/lib/containerd/io.containerd.snapshotter.v1.blockfile 700
 CreateDir /var/lib/containerd/io.containerd.snapshotter.v1.btrfs/active
@@ -93,15 +106,6 @@ CreateDir /var/lib/docker/buildkit/executor 711
 CopyFile /var/lib/docker/buildkit/history.db 600
 CopyFile /var/lib/docker/buildkit/metadata_v2.db 600
 CopyFile /var/lib/docker/buildkit/snapshots.db 600
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501-json.log 640
-CreateDir /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/checkpoints 700
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/config.v2.json 600
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hostconfig.json 600
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hostname
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hosts
-CreateDir /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/mounts 710
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/resolv.conf
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/resolv.conf.hash
 CopyFile /var/lib/docker/engine-id 600
 CopyFile /var/lib/docker/network/files/local-kv.db
 CreateDir /var/lib/docker/plugins/tmp 700
@@ -140,7 +144,7 @@ CopyFile /var/lib/upower/history-time-full-TrippLite-TRIPP_LITE_UPS_-FW-2473_A_.
 CopyFile /var/spool/cron/root 600
 
 
-# Sat Mar 22 04:11:45 PM EDT 2025 - New file properties
+# Sat Mar 22 05:19:59 PM EDT 2025 - New file properties
 
 
 SetFileProperty /opt/containerd mode 711
@@ -192,7 +196,6 @@ SetFileProperty /var/lib/containerd/io.containerd.snapshotter.v1.native mode 700
 SetFileProperty /var/lib/containerd/io.containerd.snapshotter.v1.overlayfs mode 700
 SetFileProperty /var/lib/containerd mode 711
 SetFileProperty /var/lib/docker/buildkit mode 711
-SetFileProperty /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501 mode 710
 SetFileProperty /var/lib/docker/containers mode 710
 SetFileProperty /var/lib/docker/network/files mode 750
 SetFileProperty /var/lib/docker/network mode 750
@@ -210,18 +213,3 @@ SetFileProperty /var/lib/lightdm mode 1770
 SetFileProperty /var/lib/lightdm owner lightdm
 SetFileProperty /var/lib/tailscale/files mode 700
 SetFileProperty /var/lib/tailscale mode 700
-
-# Font links
-CreateLink /etc/fonts/conf.d/69-urw-bookman.conf /usr/share/fontconfig/conf.default/69-urw-bookman.conf
-CreateLink /etc/fonts/conf.d/69-urw-c059.conf /usr/share/fontconfig/conf.default/69-urw-c059.conf
-CreateLink /etc/fonts/conf.d/69-urw-d050000l.conf /usr/share/fontconfig/conf.default/69-urw-d050000l.conf
-CreateLink /etc/fonts/conf.d/69-urw-fallback-backwards.conf /usr/share/fontconfig/conf.default/69-urw-fallback-backwards.conf
-CreateLink /etc/fonts/conf.d/69-urw-fallback-generics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-generics.conf
-CreateLink /etc/fonts/conf.d/69-urw-fallback-specifics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-specifics.conf
-CreateLink /etc/fonts/conf.d/69-urw-gothic.conf /usr/share/fontconfig/conf.default/69-urw-gothic.conf
-CreateLink /etc/fonts/conf.d/69-urw-nimbus-mono-ps.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-mono-ps.conf
-CreateLink /etc/fonts/conf.d/69-urw-nimbus-roman.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-roman.conf
-CreateLink /etc/fonts/conf.d/69-urw-nimbus-sans.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-sans.conf
-CreateLink /etc/fonts/conf.d/69-urw-p052.conf /usr/share/fontconfig/conf.default/69-urw-p052.conf
-CreateLink /etc/fonts/conf.d/69-urw-standard-symbols-ps.conf /usr/share/fontconfig/conf.default/69-urw-standard-symbols-ps.conf
-CreateLink /etc/fonts/conf.d/69-urw-z003.conf /usr/share/fontconfig/conf.default/69-urw-z003.conf
