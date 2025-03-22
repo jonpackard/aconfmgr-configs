@@ -1,53 +1,3 @@
-
-
-# Sat Mar 22 04:11:42 PM EDT 2025 - Unknown packages
-
-
-AddPackage base # Minimal package set to define a basic Arch Linux installation
-AddPackage base-devel # Basic tools to build Arch Linux packages
-AddPackage cinnamon # Linux desktop which provides advanced innovative features and a traditional user experience
-AddPackage cronie # Daemon that runs specified programs at scheduled times and related tools
-AddPackage dhcpcd # DHCP/ IPv4LL/ IPv6RA/ DHCPv6 client
-AddPackage docker # Pack, ship and run any application as a lightweight container
-AddPackage efibootmgr # Linux user-space application to modify the EFI Boot Manager
-AddPackage firefox # Fast, Private & Safe Web Browser
-AddPackage gimp # GNU Image Manipulation Program
-AddPackage git # the fast distributed version control system
-AddPackage gnu-free-fonts # A free family of scalable outline fonts
-AddPackage grub # GNU GRand Unified Bootloader (2)
-AddPackage htop # Interactive process viewer
-AddPackage lightdm # A lightweight display manager
-AddPackage lightdm-gtk-greeter # GTK+ greeter for LightDM
-AddPackage linux # The Linux kernel and modules
-AddPackage linux-firmware # Firmware files for Linux
-AddPackage man-db # A utility for reading man pages
-AddPackage mate-terminal # The MATE Terminal Emulator
-AddPackage nano # Pico editor clone with enhancements
-AddPackage nix # A purely functional package manager
-AddPackage nvidia-open # NVIDIA open kernel modules
-AddPackage openssh # SSH protocol implementation for remote login, command execution and file transfer
-AddPackage sudo # Give certain users the ability to run some commands as root
-AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wherever they are.
-AddPackage tigervnc # Suite of VNC servers and clients based on the VNC 4 branch of TightVNC
-AddPackage tmux # Terminal multiplexer
-AddPackage vi # The original ex/vi text editor
-AddPackage warp-terminal # Warp, the Rust-based terminal for developers and teams
-AddPackage xorg-server # Xorg X server
-AddPackage xorg-xauth # X.Org authorization settings program
-
-
-# Sat Mar 22 04:11:44 PM EDT 2025 - Unknown foreign packages
-
-
-AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
-AddPackage --foreign paru # Feature packed AUR helper
-AddPackage --foreign paru-debug # Detached debugging symbols for paru
-AddPackage --foreign proton-pass-bin # Open-source password manager for effortless protection. Securely store, share and auto-login your accounts with Proton Pass, using end-to-end encryption trusted by millions.
-
-
-# Sat Mar 22 04:11:44 PM EDT 2025 - New / changed files
-
-
 CopyFile /boot/grub/grub.cfg 600
 CopyFile /boot/grub/grubenv
 CopyFile /efi/EFI/GRUB/grubx64.efi 755
@@ -109,25 +59,6 @@ CreateFile /etc/subgid- > /dev/null
 CopyFile /etc/subuid
 CreateFile /etc/subuid- > /dev/null
 CopyFile /etc/sudoers
-CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/lightdm.service
-CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
-CreateLink /etc/systemd/system/multi-user.target.wants/dhcpcd.service /usr/lib/systemd/system/dhcpcd.service
-CreateLink /etc/systemd/system/multi-user.target.wants/docker.service /usr/lib/systemd/system/docker.service
-CreateLink /etc/systemd/system/multi-user.target.wants/nix-daemon.service /usr/lib/systemd/system/nix-daemon.service
-CreateLink /etc/systemd/system/multi-user.target.wants/remote-fs.target /usr/lib/systemd/system/remote-fs.target
-CreateLink /etc/systemd/system/multi-user.target.wants/sshd.service /usr/lib/systemd/system/sshd.service
-CreateLink /etc/systemd/system/multi-user.target.wants/tailscaled.service /usr/lib/systemd/system/tailscaled.service
-CreateLink /etc/systemd/system/sockets.target.wants/systemd-userdbd.socket /usr/lib/systemd/system/systemd-userdbd.socket
-CreateLink /etc/systemd/system/systemd-hibernate.service.wants/nvidia-hibernate.service /usr/lib/systemd/system/nvidia-hibernate.service
-CreateLink /etc/systemd/system/systemd-hibernate.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
-CreateLink /etc/systemd/system/systemd-suspend-then-hibernate.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
-CreateLink /etc/systemd/system/systemd-suspend.service.wants/nvidia-resume.service /usr/lib/systemd/system/nvidia-resume.service
-CreateLink /etc/systemd/system/systemd-suspend.service.wants/nvidia-suspend.service /usr/lib/systemd/system/nvidia-suspend.service
-CreateLink /etc/systemd/user/pipewire-session-manager.service /usr/lib/systemd/user/wireplumber.service
-CreateLink /etc/systemd/user/pipewire.service.wants/wireplumber.service /usr/lib/systemd/user/wireplumber.service
-CreateLink /etc/systemd/user/sockets.target.wants/p11-kit-server.socket /usr/lib/systemd/user/p11-kit-server.socket
-CreateLink /etc/systemd/user/sockets.target.wants/pipewire-pulse.socket /usr/lib/systemd/user/pipewire-pulse.socket
-CreateLink /etc/systemd/user/sockets.target.wants/pipewire.socket /usr/lib/systemd/user/pipewire.socket
 CopyFile /etc/vconsole.conf
 CreateDir /opt/containerd/bin 711
 CreateDir /opt/containerd/lib 711
@@ -288,3 +219,18 @@ SetFileProperty /var/lib/lightdm mode 1770
 SetFileProperty /var/lib/lightdm owner lightdm
 SetFileProperty /var/lib/tailscale/files mode 700
 SetFileProperty /var/lib/tailscale mode 700
+
+# Font links
+CreateLink /etc/fonts/conf.d/69-urw-bookman.conf /usr/share/fontconfig/conf.default/69-urw-bookman.conf
+CreateLink /etc/fonts/conf.d/69-urw-c059.conf /usr/share/fontconfig/conf.default/69-urw-c059.conf
+CreateLink /etc/fonts/conf.d/69-urw-d050000l.conf /usr/share/fontconfig/conf.default/69-urw-d050000l.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-backwards.conf /usr/share/fontconfig/conf.default/69-urw-fallback-backwards.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-generics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-generics.conf
+CreateLink /etc/fonts/conf.d/69-urw-fallback-specifics.conf /usr/share/fontconfig/conf.default/69-urw-fallback-specifics.conf
+CreateLink /etc/fonts/conf.d/69-urw-gothic.conf /usr/share/fontconfig/conf.default/69-urw-gothic.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-mono-ps.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-mono-ps.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-roman.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-roman.conf
+CreateLink /etc/fonts/conf.d/69-urw-nimbus-sans.conf /usr/share/fontconfig/conf.default/69-urw-nimbus-sans.conf
+CreateLink /etc/fonts/conf.d/69-urw-p052.conf /usr/share/fontconfig/conf.default/69-urw-p052.conf
+CreateLink /etc/fonts/conf.d/69-urw-standard-symbols-ps.conf /usr/share/fontconfig/conf.default/69-urw-standard-symbols-ps.conf
+CreateLink /etc/fonts/conf.d/69-urw-z003.conf /usr/share/fontconfig/conf.default/69-urw-z003.conf
