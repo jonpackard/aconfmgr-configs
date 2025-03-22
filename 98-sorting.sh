@@ -47,12 +47,6 @@ CopyFile /etc/passwd-
 CopyFile /etc/resolv.conf
 CopyFile /etc/resolv.pre-tailscale-backup.conf
 CopyFile /etc/shells
-CopyFile /etc/ssh/ssh_host_ecdsa_key 600
-CopyFile /etc/ssh/ssh_host_ecdsa_key.pub
-CopyFile /etc/ssh/ssh_host_ed25519_key 600
-CopyFile /etc/ssh/ssh_host_ed25519_key.pub
-CopyFile /etc/ssh/ssh_host_rsa_key 600
-CopyFile /etc/ssh/ssh_host_rsa_key.pub
 CopyFile /etc/ssh/sshd_config
 CopyFile /etc/subgid
 CreateFile /etc/subgid- > /dev/null
@@ -93,9 +87,6 @@ CreateDir /var/lib/containerd/io.containerd.snapshotter.v1.native/snapshots 700
 CreateDir /var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots 700
 CreateDir /var/lib/containerd/tmpmounts 700
 CreateLink /var/lib/dbus/machine-id /etc/machine-id
-CopyFile /var/lib/dhcpcd/duid 640
-CopyFile /var/lib/dhcpcd/enp5s0.lease 640
-CopyFile /var/lib/dhcpcd/secret 400
 CopyFile /var/lib/docker/buildkit/cache.db 600
 CopyFile /var/lib/docker/buildkit/containerdmeta.db
 CreateDir /var/lib/docker/buildkit/executor 711
