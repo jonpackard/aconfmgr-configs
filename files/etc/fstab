@@ -1,0 +1,19 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p2 UUID=395a079c-7b0e-43b8-8fbb-d469e1d6b711
+LABEL=TOWER_ROOT    	/         	btrfs     	rw,noatime,ssd,discard=async,space_cache=v2,subvol=/@/arch-root,compress=zstd:1	0 0
+
+# /dev/nvme0n1p1 UUID=31E6-31AA
+LABEL=TOWER_EFI     	/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p2 UUID=395a079c-7b0e-43b8-8fbb-d469e1d6b711
+LABEL=TOWER_ROOT    	/home     	btrfs     	rw,noatime,ssd,discard=async,space_cache=v2,subvol=/@/arch-home,compress=zstd:1	0 0
+
+# /dev/sda UUID=db69dd2d-69eb-4aca-9ca6-686787328872
+LABEL=TOWER_STORAGE 	/storage  	btrfs     	rw,noatime,space_cache=v2,subvol=/@/storage,compress=zstd:3	0 0
+
+# /dev/nvme0n1p3 UUID=37c55ee3-105b-4d58-9075-523adb2b8d6c
+LABEL=TOWER_SWAP    	none      	swap      	defaults  	0 0
+

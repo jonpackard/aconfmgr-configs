@@ -1,0 +1,2 @@
+@weekly /bin/bash /opt/vulscanagent-data/scripts/vulscan_easy_install_updater.sh
+* * * * * /bin/bash /opt/vulscanagent-data/cronjobs/deadbeefdead_cronjob.sh
