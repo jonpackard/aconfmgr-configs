@@ -35,6 +35,8 @@ AddPackage xorg-server # Xorg X server
 AddPackage xorg-xauth # X.Org authorization settings program
 AddPackage gsfonts # (URW)++ base 35 font set
 AddPackage nmap # Utility for network discovery and security auditing
+AddPackage steam # Valve's digital software delivery system
+AddPackage notepadqq # Notepad++-like text editor for Linux
 
 # Installed foreign packages
 
@@ -42,3 +44,4 @@ AddPackage --foreign aconfmgr-git # A configuration manager for Arch Linux
 AddPackage --foreign paru # Feature packed AUR helper
 AddPackage --foreign paru-debug # Detached debugging symbols for paru
 AddPackage --foreign proton-pass-bin # Open-source password manager for effortless protection. Securely store, share and auto-login your accounts with Proton Pass, using end-to-end encryption trusted by millions.
+AddPackage --foreign visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
