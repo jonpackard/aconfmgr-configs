@@ -29,6 +29,7 @@ AddPackage tailscale # A mesh VPN that makes it easy to connect your devices, wh
 AddPackage tigervnc # Suite of VNC servers and clients based on the VNC 4 branch of TightVNC
 AddPackage tmux # Terminal multiplexer
 AddPackage vi # The original ex/vi text editor
+AddPackage vim # Vi Improved, a highly configurable, improved version of the vi text editor
 AddPackage warp-terminal # Warp, the Rust-based terminal for developers and teams
 AddPackage xorg-server # Xorg X server
 AddPackage xorg-xauth # X.Org authorization settings program
