@@ -34,6 +34,7 @@ AddPackage warp-terminal # Warp, the Rust-based terminal for developers and team
 AddPackage xorg-server # Xorg X server
 AddPackage xorg-xauth # X.Org authorization settings program
 AddPackage gsfonts # (URW)++ base 35 font set
+AddPackage nmap # Utility for network discovery and security auditing
 
 # Installed foreign packages
 

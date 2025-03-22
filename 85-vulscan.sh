@@ -5,17 +5,3 @@ CopyFile /opt/vulscanagent-data/cronjobs/deadbeefdead_cronjob.sh 755
 CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install.sh 755
 CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install_uninstall.sh 755
 CopyFile /opt/vulscanagent-data/scripts/vulscan_easy_install_updater.sh 755
-
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501-json.log 640
-CreateDir /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/checkpoints 700
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/config.v2.json 600
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hostconfig.json 600
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hostname
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/hosts
-CreateDir /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/mounts 710
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/resolv.conf
-CopyFile /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501/resolv.conf.hash
-
-CreateDir /var/lib/containerd/io.containerd.runtime.v2.task/moby/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501 711
-
-SetFileProperty /var/lib/docker/containers/b3d370ca244aa0dcfe72e63af6bed26ae7c908f3bb171a7e11602f94c2dc1501 mode 710
