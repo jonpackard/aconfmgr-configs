@@ -37,6 +37,7 @@ AddPackage gsfonts # (URW)++ base 35 font set
 AddPackage nmap # Utility for network discovery and security auditing
 AddPackage steam # Valve's digital software delivery system
 AddPackage notepadqq # Notepad++-like text editor for Linux
+AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
 
 # Installed foreign packages
 
