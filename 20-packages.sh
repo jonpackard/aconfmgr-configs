@@ -38,6 +38,8 @@ AddPackage nmap # Utility for network discovery and security auditing
 AddPackage steam # Valve's digital software delivery system
 AddPackage notepadqq # Notepad++-like text editor for Linux
 AddPackage gamemode # A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
+AddPackage libbsd # Provides useful functions commonly found on BSD systems like strlcpy()
+AddPackage wayland-protocols # Specifications of extended Wayland protocols
 
 # Installed foreign packages
 
@@ -46,3 +48,5 @@ AddPackage --foreign paru # Feature packed AUR helper
 AddPackage --foreign paru-debug # Detached debugging symbols for paru
 AddPackage --foreign proton-pass-bin # Open-source password manager for effortless protection. Securely store, share and auto-login your accounts with Proton Pass, using end-to-end encryption trusted by millions.
 AddPackage --foreign visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
+AddPackage --foreign envision-xr-git # GUI for Monado
+AddPackage --foreign monado-vulkan-layers-git # Optional Vulkan Layers for Monado.
