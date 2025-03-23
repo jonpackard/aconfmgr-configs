@@ -16,6 +16,7 @@ application/pkix-crl+pem=gcr-viewer.desktop;
 application/postscript=gimp.desktop;
 application/rdf+xml=firefox.desktop;
 application/rss+xml=firefox.desktop;
+application/x-cmakecache=cmake-gui.desktop;
 application/x-code-workspace=code.desktop;
 application/x-fluid=fluid.desktop;
 application/x-gnome-saved-search=nemo.desktop;

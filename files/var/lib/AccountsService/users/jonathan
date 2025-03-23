@@ -1,8 +1,8 @@
 [org.freedesktop.DisplayManager.AccountsService]
-BackgroundFile='/usr/share/backgrounds/gnome/adwaita-l.jxl'
+BackgroundFile='/usr/share/backgrounds/gnome/adwaita-l.jpg'
 
 [User]
 Session=
-XSession=cinnamon2d
+XSession=cinnamon
 Icon=/home/jonathan/.face
 SystemAccount=false

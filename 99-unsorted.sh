@@ -1,6 +1,6 @@
 
 
-# Sat Mar 22 07:06:43 PM EDT 2025 - New / changed files
+# Sun Mar 23 03:31:57 PM EDT 2025 - New / changed files
 
 
 CopyFile /boot/grub/grub.cfg 600
@@ -81,7 +81,7 @@ CopyFile /usr/share/icons/AdwaitaLegacy/icon-theme.cache
 CopyFile /usr/share/icons/hicolor/icon-theme.cache
 CopyFile /usr/share/info/dir
 CreateFile /var/db/sudo/lectured/1000 600 '' jonathan > /dev/null
-CopyFile /var/lib/AccountsService/users/jonathan 600
+CopyFile /var/lib/AccountsService/users/jonathan
 CreateDir /var/lib/colord/.cache 700 colord colord
 CreateDir /var/lib/colord/icc '' colord colord
 CopyFile /var/lib/colord/mapping.db '' colord colord
@@ -92,6 +92,16 @@ CreateDir /var/lib/libuuid 2775 uuidd uuidd
 CreateDir /var/lib/lightdm-data/jonathan 770 jonathan lightdm
 CreateDir /var/lib/lightdm-data/lightdm 770 lightdm lightdm
 CopyFile /var/lib/lightdm/.cache/lightdm-gtk-greeter/state '' lightdm lightdm
+CopyFile /var/lib/lightdm/.config/user-dirs.dirs 600 lightdm lightdm
+CopyFile /var/lib/lightdm/.config/user-dirs.locale '' lightdm lightdm
+CreateDir /var/lib/lightdm/Desktop '' lightdm lightdm
+CreateDir /var/lib/lightdm/Documents '' lightdm lightdm
+CreateDir /var/lib/lightdm/Downloads '' lightdm lightdm
+CreateDir /var/lib/lightdm/Music '' lightdm lightdm
+CreateDir /var/lib/lightdm/Pictures '' lightdm lightdm
+CreateDir /var/lib/lightdm/Public '' lightdm lightdm
+CreateDir /var/lib/lightdm/Templates '' lightdm lightdm
+CreateDir /var/lib/lightdm/Videos '' lightdm lightdm
 CreateDir /var/lib/machines 700
 CreateDir /var/lib/portables 700
 CreateDir /var/lib/private 700
@@ -113,7 +123,7 @@ CreateDir /var/lib/tpm2-tss/system/keystore 2775 tss tss
 CopyFile /var/spool/cron/root 600
 
 
-# Sat Mar 22 07:06:44 PM EDT 2025 - New file properties
+# Sun Mar 23 03:31:58 PM EDT 2025 - New file properties
 
 
 SetFileProperty /opt/containerd mode 711
@@ -164,6 +174,9 @@ SetFileProperty /var/lib/lightdm/.cache/lightdm-gtk-greeter group lightdm
 SetFileProperty /var/lib/lightdm/.cache/lightdm-gtk-greeter owner lightdm
 SetFileProperty /var/lib/lightdm/.cache group lightdm
 SetFileProperty /var/lib/lightdm/.cache owner lightdm
+SetFileProperty /var/lib/lightdm/.config group lightdm
+SetFileProperty /var/lib/lightdm/.config mode 700
+SetFileProperty /var/lib/lightdm/.config owner lightdm
 SetFileProperty /var/lib/lightdm group lightdm
 SetFileProperty /var/lib/lightdm mode 1770
 SetFileProperty /var/lib/lightdm owner lightdm

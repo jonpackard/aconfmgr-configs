@@ -84,6 +84,8 @@ Software development
 Software libraries
 * libcdio: (libcdio).           GNU Compact Disc Input, Output, and Control 
                                   Library.
+* mpfr: (mpfr).                 Multiple Precision Floating-Point Reliable 
+                                  Library.
 
 System administration
 * Which: (which).               Show full path of commands.
