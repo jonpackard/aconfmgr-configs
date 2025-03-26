@@ -1,12 +1,54 @@
 
 
-# Sun Mar 23 03:31:57 PM EDT 2025 - New / changed files
+# Tue Mar 25 08:05:19 PM EDT 2025 - Unknown packages
+
+
+AddPackage caja # File manager for the MATE desktop
+AddPackage freerdp # Free implementation of the Remote Desktop Protocol (RDP)
+AddPackage marco # MATE default window manager
+AddPackage mate-backgrounds # Background images and data for MATE
+AddPackage mate-control-center # The Control Center for MATE
+AddPackage mate-icon-theme # MATE icon theme
+AddPackage mate-media # MATE Media Tools
+AddPackage mate-menus # MATE menu specifications
+AddPackage mate-notification-daemon # Notification daemon for MATE
+AddPackage mate-panel # The MATE Panel
+AddPackage mate-polkit # PolicyKit integration for the MATE desktop
+AddPackage mate-session-manager # The MATE Session Handler
+AddPackage mate-settings-daemon # The MATE Settings daemon
+AddPackage mate-themes # Official themes for the MATE desktop
+AddPackage mate-user-guide # MATE User Guide
+AddPackage mesa-utils # Essential Mesa utilities
+AddPackage remmina # Remote desktop client written in GTK+
+AddPackage solaar # Linux device manager for a wide range of Logitech devices
+AddPackage tree # A directory listing program displaying a depth indented list of files
+AddPackage xterm # X Terminal Emulator
+
+
+# Tue Mar 25 08:05:20 PM EDT 2025 - Missing packages
+
+
+RemovePackage notepadqq
+
+
+# Tue Mar 25 08:05:20 PM EDT 2025 - Unknown foreign packages
+
+
+AddPackage --foreign notepadqq-git # Notepad++-like text editor for Linux
+AddPackage --foreign pipewire-module-xrdp # xrdp pipewire module
+AddPackage --foreign pw-volume # Basic interface to PipeWire volume controls
+AddPackage --foreign xorgxrdp-nvidia # Xorg drivers for xrdp, with NVIDIA GPU support.
+AddPackage --foreign xrdp # An open source remote desktop protocol (RDP) server
+
+
+# Tue Mar 25 08:05:20 PM EDT 2025 - New / changed files
 
 
 CopyFile /boot/grub/grub.cfg 600
 CopyFile /boot/grub/grubenv
 CopyFile /efi/EFI/GRUB/grubx64.efi 755
 CreateFile /etc/.pwd.lock 600 > /dev/null
+CopyFile /etc/X11/Xwrapper.config
 CopyFile /etc/adjtime
 CreateDir /etc/cni/net.d 700
 CreateDir /etc/colord '' colord colord
@@ -54,6 +96,7 @@ CopyFile /etc/locale.conf
 CopyFile /etc/locale.gen
 CreateLink /etc/localtime /usr/share/zoneinfo/America/New_York
 CopyFile /etc/machine-id 444
+CopyFile /etc/makepkg.conf
 CopyFile /etc/mkinitcpio.d/linux.preset
 CopyFile /etc/nix/nix.conf
 CreateLink /etc/os-release ../usr/lib/os-release
@@ -71,6 +114,9 @@ CreateFile /etc/subuid- > /dev/null
 CopyFile /etc/sudoers
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
 CopyFile /etc/vconsole.conf
+CopyFile /etc/xrdp/rsakeys.ini 600
+CopyFile /etc/xrdp/startwm.sh
+CopyFile /etc/xrdp/xrdp.ini
 CreateDir /opt/containerd/bin 711
 CreateDir /opt/containerd/lib 711
 CopyFile /usr/lib32/gconv/gconv-modules.cache
@@ -78,10 +124,13 @@ CopyFile /usr/share/applications/mimeinfo.cache
 CopyFile /usr/share/glib-2.0/schemas/gschemas.compiled
 CopyFile /usr/share/icons/Adwaita/icon-theme.cache
 CopyFile /usr/share/icons/AdwaitaLegacy/icon-theme.cache
+CopyFile /usr/share/icons/ContrastHigh/icon-theme.cache
 CopyFile /usr/share/icons/hicolor/icon-theme.cache
+CopyFile /usr/share/icons/mate/icon-theme.cache
+CopyFile /usr/share/icons/menta/icon-theme.cache
 CopyFile /usr/share/info/dir
 CreateFile /var/db/sudo/lectured/1000 600 '' jonathan > /dev/null
-CopyFile /var/lib/AccountsService/users/jonathan
+CopyFile /var/lib/AccountsService/users/jonathan 600
 CreateDir /var/lib/colord/.cache 700 colord colord
 CreateDir /var/lib/colord/icc '' colord colord
 CopyFile /var/lib/colord/mapping.db '' colord colord
@@ -123,7 +172,7 @@ CreateDir /var/lib/tpm2-tss/system/keystore 2775 tss tss
 CopyFile /var/spool/cron/root 600
 
 
-# Sun Mar 23 03:31:58 PM EDT 2025 - New file properties
+# Tue Mar 25 08:05:21 PM EDT 2025 - New file properties
 
 
 SetFileProperty /opt/containerd mode 711

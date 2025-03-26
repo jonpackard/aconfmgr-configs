@@ -3,6 +3,6 @@ BackgroundFile='/usr/share/backgrounds/gnome/adwaita-l.jpg'
 
 [User]
 Session=
-XSession=cinnamon
+XSession=mate
 Icon=/home/jonathan/.face
 SystemAccount=false

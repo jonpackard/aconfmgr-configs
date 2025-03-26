@@ -57,4 +57,5 @@ rtkit:x:133:
 nvidia-persistenced:x:143:
 nixbld:x:967:nixbld01,nixbld02,nixbld03,nixbld04,nixbld05,nixbld06,nixbld07,nixbld08,nixbld09,nixbld10
 docker:x:956:
-gamemode:x:955:
+gamemode:x:955:jonathan
+tsusers:x:1001:

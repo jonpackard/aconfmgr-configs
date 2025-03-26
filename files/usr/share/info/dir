@@ -51,6 +51,10 @@ Individual utilities
 Libraries
 * AA-lib: (aalib).              An ASCII-art graphics library
 
+Libraries:
+* LibGTop2: (libgtop2).         Library to get system specific data such as 
+                                  cpu and memory usage, active processes
+
 Miscellaneous
 * Gpm: (gpm).                   Text-mode (non-X) mouse library and server 
                                   daemon.
@@ -59,11 +63,15 @@ Programming
 * flex: (flex).                 Fast lexical analyzer generator (lex 
                                   replacement).
 
+Programming Tools
+* Gperf: (gperf).               Perfect Hash Function Generator.
+
 Software development
 * Autoconf: (autoconf).         Create source code configuration scripts.
 * Automake: (automake).         Making GNU standards-compliant Makefiles.
 * Automake-history: (automake-history).
                                 History of Automake development.
+* Check: (check).               A unit testing framework for C.
 * Cpp: (cpp).                   The GNU C preprocessor.
 * Cpplib: (cppinternals).       Cpplib internals.
 * Libtool: (libtool).           Generic shared library support script.
